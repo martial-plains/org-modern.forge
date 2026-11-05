@@ -1,0 +1,24 @@
+[package]
+name = "org-modern"
+version = "0.1.0"
+edition = "2024"
+description = "Modern looks for Org: labels for keywords, tags and dates, bullets, progress bars, tidy tables and blocks"
+license = "GPL-3.0-or-later"
+
+# Built into the .wasm by the SDK. No permissions needed.
+[package.metadata.forge]
+name = "org-modern"
+
+# Standalone: not part of the main workspace build.
+[workspace]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+forge-plugin-sdk = { git = "https://github.com/martial-plains/forge" }
+serde_json = { version = "1", default-features = false, features = ["std"] }
+
+[profile.release]
+opt-level = "s"
+lto = true
