@@ -93,7 +93,7 @@ Add this to `~/.config/forge/init.rhai`:
 
 ```rhai
 use_package("org-modern", #{
-  vc: "https://github.com/martial-plains/forge-plugin-org-modern",
+  vc: "https://github.com/martial-plains/org-modern.forge.git",
   pin: "v0.1.0",
   commands: ["org-modern-mode", "global-org-modern-mode"],
   hook: #{ "org-mode": "org-modern-mode" },
